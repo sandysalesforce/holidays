@@ -1,0 +1,36 @@
+<template>
+    <lightning-card >
+    <div class="c-container">
+        <lightning-layout horizontal-align="center" multiple-rows="true">
+            <lightning-layout-item size="6" padding="around-small">
+                <lightning-combobox name="country" label="Country" value={country} 
+                placeholder="Select Country" onchange={handleCountryChange} options={countryOptions} >
+                </lightning-combobox>
+            </lightning-layout-item>
+            <lightning-layout-item size="6" padding="around-small">
+                <lightning-combobox name="year" label="Year" value={year} 
+                placeholder="Select Year" onchange={handleYearChange} options={yearOptions}>
+                </lightning-combobox>
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-small">
+                <lightning-button variant="brand" label="Get Holidays"
+                 title="Get Holidays" onclick={handleGetHolidays} class="slds-m-left_x-small"></lightning-button>
+            </lightning-layout-item>
+        </lightning-layout>
+        <template if:true={showLoading}>
+        <lightning-spinner alternative-text="Loading" size="small"></lightning-spinner>
+        </template>
+        <template if:true={showHolidays}>
+        <div style="height: 300px;">
+        <lightning-datatable
+                key-field="name"
+                data={holidays}
+                columns={columns}
+                hide-checkbox-column
+                onrowaction={handleRowAction} >
+        </lightning-datatable>
+        </div>
+        </template>
+    </div>
+</lightning-card>
+</template>

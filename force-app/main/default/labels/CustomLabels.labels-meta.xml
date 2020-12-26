@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>API_Key</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>API Key</shortDescription>
+        <value>234fde0314fb84762ac7b0773b229b882ee17456</value>
+    </labels>
+    <labels>
+        <fullName>Holidays_End_Point</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Holidays End Point</shortDescription>
+        <value>https://calendarific.com/api/v2/holidays?</value>
+    </labels>
+</CustomLabels>
